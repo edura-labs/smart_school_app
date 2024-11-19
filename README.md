@@ -1,6 +1,6 @@
 # INTRODUCTION
 
-📱**Smart School App** is an open-source project for a mobile application prototype for smart schools to help with managing student personal data, results, textbooks/outlines/books, time-table and many others.
+📱**Smart School App** is an open-source project for a mobile application prototype for smart schools to enable their students to easily access and manage activities, resources and student data from their mobile phone
 
 ## Supported Platforms
 
