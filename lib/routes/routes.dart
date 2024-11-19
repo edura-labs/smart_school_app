@@ -1,3 +1,6 @@
+import 'package:get/get.dart';
+import 'package:stellar/view/android/splash_screen/startup/android_startup_screen.dart';
+
 class Routes {
   //Splash screens
   static const startupSplashscreen = "/";
@@ -9,5 +12,11 @@ class Routes {
   static const onboarding = "/onboarding";
 
   //========================= GET PAGES ==========================\\
-  static final getPages = [];
+  static final getPages = [
+    //Startup and Auth
+    GetPage(
+      name: startupSplashscreen,
+      page: () => const AndroidStartupScreen(),
+    ),
+  ];
 }

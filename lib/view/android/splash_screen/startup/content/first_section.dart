@@ -24,7 +24,9 @@ firstSection(Size size) {
       )
           .animate(onPlay: (controller) => controller.repeat(), autoPlay: true)
           .scaleXY(
-              curve: Curves.easeInOut, duration: const Duration(seconds: 2)),
+            curve: Curves.easeInOut,
+            duration: const Duration(seconds: 2),
+          ),
     ),
   );
 }

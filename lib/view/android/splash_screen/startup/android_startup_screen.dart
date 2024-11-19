@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:stellar/controllers/auth/auth_controller.dart';
-import 'package:stellar/view/android/splash_screen/startup/content/bottom_section.dart';
 import 'package:stellar/view/android/splash_screen/startup/content/first_section.dart';
 
 class AndroidStartupScreen extends GetView<AuthController> {
@@ -29,7 +28,6 @@ class AndroidStartupScreen extends GetView<AuthController> {
               runAlignment: WrapAlignment.center,
               children: [
                 firstSection(size),
-                bottomSection(size),
               ],
             ),
           ),
