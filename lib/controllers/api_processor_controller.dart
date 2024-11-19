@@ -64,7 +64,7 @@ class ApiProcessorController extends GetxController {
         duration: const Duration(seconds: 2),
         boxShadows: [
           BoxShadow(
-            color: colorScheme.inversePrimary.withOpacity(.2),
+            color: colorScheme.inversePrimary.withOpacity(.1),
             offset: const Offset(0, 4),
             blurRadius: 10,
             spreadRadius: 2,
@@ -134,7 +134,7 @@ class ApiProcessorController extends GetxController {
         duration: const Duration(seconds: 2),
         boxShadows: [
           BoxShadow(
-            color: colorScheme.inversePrimary.withOpacity(.2),
+            color: colorScheme.inversePrimary.withOpacity(.1),
             offset: const Offset(0, 4),
             blurRadius: 10,
             spreadRadius: 2,

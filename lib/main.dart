@@ -76,11 +76,10 @@ class MyApp extends StatelessWidget {
       highContrastDarkTheme: androidDarkTheme,
       locale: Get.deviceLocale,
       initialRoute: Routes.startupSplashscreen,
-      // getPages: Routes.getPages,
+      getPages: Routes.getPages,
       theme: androidLightTheme,
       darkTheme: androidDarkTheme,
-      // themeMode: ThemeController.instance.themeMode.value,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeController.instance.themeMode.value,
       scrollBehavior: ScrollConfiguration.of(context).copyWith(
         multitouchDragStrategy: MultitouchDragStrategy.sumAllPointers,
         // physics: const BouncingScrollPhysics(),

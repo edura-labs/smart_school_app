@@ -21,7 +21,7 @@ class ConnectivityStatusController extends GetxController {
   void onInit() async {
     super.onInit();
     await Future.delayed(const Duration(seconds: 3));
-    initConnectivity();
+    // initConnectivity();
     _connectivitySubscription =
         _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
   }
