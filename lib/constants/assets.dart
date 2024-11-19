@@ -8,6 +8,7 @@ class Assets {
 //PNG
 
 //SVG
+  static const appIconSvg = "assets/icons/svg/app_icon.svg";
 
 //=================== Animations ===================\\
 

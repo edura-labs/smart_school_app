@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
+  cupertino_icons:
   image_picker:
   intl:
   dio:
@@ -24,11 +24,40 @@ dependencies:
   url_launcher:
   cached_network_image:
   delightful_toast:
+  flutter_animate:
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.2
+
+flutter_native_splash:
+  image: assets/icons/png/app_icon.png
+  color: "#f9f9f9"
+  image_dark: assets/icons/png/app_icon.png
+  color_dark: "#000000"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  remove_alpha_ios: true
+  ios: true
+  image_path: "assets/icons/png/app_icon.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/icons/png/app_icon.png"
+    background_color: "#FFFFFF"
+    theme_color: "#FFFFFF"
+  windows:
+    generate: true
+    image_path: "assets/icons/png/app_icon.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/icons/png/app_icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -38,9 +67,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/animations/
+    - assets/icons/png/
+    - assets/icons/svg/
+    - assets/images/png/
+    - assets/images/svg/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -53,13 +85,63 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins/Poppins-Black.ttf
+          weight: 500
+          style: normal
+        - asset: fonts/Poppins/Poppins-BlackItalic.ttf
+          weight: 500
+          style: italic
+        - asset: fonts/Poppins/Poppins-Bold.ttf
+          weight: 600
+          style: normal
+        - asset: fonts/Poppins/Poppins-BoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: fonts/Poppins/Poppins-ExtraBold.ttf
+          weight: 700
+          style: normal
+        - asset: fonts/Poppins/Poppins-ExtraBoldItalic.ttf
+          weight: 800
+          style: italic
+        - asset: fonts/Poppins/Poppins-ExtraLight.ttf
+          weight: 300
+          style: normal
+        - asset: fonts/Poppins/Poppins-ExtraLightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: fonts/Poppins/Poppins-Italic.ttf
+          weight: 500
+          style: italic
+        - asset: fonts/Poppins/Poppins-Light.ttf
+          weight: 300
+          style: normal
+        - asset: fonts/Poppins/Poppins-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: fonts/Poppins/Poppins-Medium.ttf
+          weight: 500
+          style: normal
+        - asset: fonts/Poppins/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: fonts/Poppins/Poppins-Regular.ttf
+          weight: 500
+          style: normal
+        - asset: fonts/Poppins/Poppins-SemiBold.ttf
+          weight: 600
+          style: normal
+        - asset: fonts/Poppins/Poppins-SemiBoldItalic.ttf
+          weight: 400
+          style: italic
+        - asset: fonts/Poppins/Poppins-Thin.ttf
+          weight: 400
+          style: italic
+        - asset: fonts/Poppins/Poppins-ThinItalic.ttf
+          weight: 400
+          style: italic
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
