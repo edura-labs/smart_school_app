@@ -6,6 +6,7 @@ class Assets {
 
 //=================== Icons ===================\\
 //PNG
+  static const appIconPng = "assets/icons/png/app_icon.png";
 
 //SVG
   static const appIconSvg = "assets/icons/svg/app_icon.svg";
