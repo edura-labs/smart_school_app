@@ -9,6 +9,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stellar/controllers/connectivity_status_controller.dart';
 import 'package:stellar/controllers/theme_controller.dart';
 import 'package:stellar/utils/components/app_error_widget.dart';
+// import 'package:stellar/view/android/onboarding/onboarding_screen_1.dart';
+// import 'package:stellar/view/android/onboarding/onboarding_screen_2.dart';
+import 'package:stellar/view/android/onboarding/onboarding_screen_3.dart';
 
 import 'routes/routes.dart';
 import 'theme/app_theme.dart';
@@ -86,7 +89,7 @@ class MyApp extends StatelessWidget {
         scrollbars: true,
       ),
       // This is the home route
-      // home: const AndroidHomeScreen(),
+       home: const OnboardingScreen3(),
     );
   }
 }
