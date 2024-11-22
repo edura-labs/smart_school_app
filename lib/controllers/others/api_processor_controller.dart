@@ -5,7 +5,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/route_manager.dart';
 import 'package:stellar/constants/consts.dart';
 
-import '../../../theme/colors.dart';
+import '../../../../theme/colors.dart';
 
 class ApiProcessorController extends GetxController {
   static Future<dynamic> errorState(data) async {

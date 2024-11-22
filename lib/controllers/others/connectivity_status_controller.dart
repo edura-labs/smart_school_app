@@ -4,7 +4,7 @@ import 'dart:developer';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:stellar/controllers/api_processor_controller.dart';
+import 'package:stellar/controllers/others/api_processor_controller.dart';
 
 class ConnectivityStatusController extends GetxController {
   static ConnectivityStatusController get instance {

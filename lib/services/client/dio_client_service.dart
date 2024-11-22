@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:stellar/controllers/api_processor_controller.dart';
+import 'package:stellar/controllers/others/api_processor_controller.dart';
 
 String contentType = "application/json";
 

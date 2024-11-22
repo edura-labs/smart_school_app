@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:stellar/controllers/connectivity_status_controller.dart';
-import 'package:stellar/controllers/theme_controller.dart';
+import 'package:stellar/controllers/others/connectivity_status_controller.dart';
+import 'package:stellar/controllers/others/theme_controller.dart';
 import 'package:stellar/utils/components/app_error_widget.dart';
 
 import 'routes/routes.dart';
