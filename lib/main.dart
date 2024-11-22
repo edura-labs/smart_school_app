@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:stellar/controllers/others/connectivity_status_controller.dart';
+import 'package:stellar/bindings/app_initial_bindings.dart';
 import 'package:stellar/controllers/others/theme_controller.dart';
 import 'package:stellar/utils/components/app_error_widget.dart';
 
@@ -25,9 +25,7 @@ void main() async {
   // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   prefs = await SharedPreferences.getInstance();
-
-  Get.put(ThemeController());
-  Get.put(ConnectivityStatusController());
+  AppInitialBindings().dependencies();
 
   //This is to handle widget errors by showing a custom error widget screen
   if (kReleaseMode) ErrorWidget.builder = (_) => const AppErrorWidget();
@@ -60,6 +58,7 @@ class MyApp extends StatelessWidget {
         highContrastDarkTheme: androidDarkTheme,
         locale: Get.deviceLocale,
         initialRoute: Routes.startupSplashscreen,
+        initialBinding: AppInitialBindings(),
         // getPages: Routes.getPages,
         theme: Get.isDarkMode ? iOSDarkTheme : iOSLightTheme,
       );
@@ -79,6 +78,7 @@ class MyApp extends StatelessWidget {
       getPages: Routes.getPages,
       theme: androidLightTheme,
       darkTheme: androidDarkTheme,
+      initialBinding: AppInitialBindings(),
       themeMode: ThemeController.instance.themeMode.value,
       scrollBehavior: ScrollConfiguration.of(context).copyWith(
         multitouchDragStrategy: MultitouchDragStrategy.sumAllPointers,

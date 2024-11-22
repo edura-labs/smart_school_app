@@ -6,9 +6,7 @@ import 'package:stellar/view/android/auth/onboarding/module/onboard_content.dart
 import '../../../main.dart';
 
 class OnboardingController extends GetxController {
-  static OnboardingController get instance {
-    return Get.find<OnboardingController>();
-  }
+  static OnboardingController get instance => Get.find<OnboardingController>();
 
   var scrollController = ScrollController().obs;
   var imageController = PageController().obs;
