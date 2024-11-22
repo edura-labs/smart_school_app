@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:stellar/controllers/auth/login_controller.dart';
+import 'package:stellar/controllers/auth/onboarding_controller.dart';
 
-class AndroidOnboardingScreen extends GetView<LoginController> {
+class AndroidOnboardingScreen extends GetView<OnboardingController> {
   const AndroidOnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // //Initialize the controller
-    // Get.put(LoginController());
-
     // var size = MediaQuery.sizeOf(context);
     var colorScheme = Theme.of(context).colorScheme;
 

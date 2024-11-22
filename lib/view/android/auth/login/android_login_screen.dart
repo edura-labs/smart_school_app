@@ -7,9 +7,6 @@ class AndroidLoginScreen extends GetView<LoginController> {
 
   @override
   Widget build(BuildContext context) {
-    // //Initialize the controller
-    // Get.put(LoginController());
-
     // var size = MediaQuery.sizeOf(context);
     var colorScheme = Theme.of(context).colorScheme;
 
