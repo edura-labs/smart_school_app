@@ -8,9 +8,6 @@ class AndroidStartupScreen extends GetView<AuthController> {
 
   @override
   Widget build(BuildContext context) {
-    //Initialize the controller
-    Get.put(AuthController());
-
     var size = MediaQuery.sizeOf(context);
     var colorScheme = Theme.of(context).colorScheme;
 

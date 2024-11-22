@@ -3,9 +3,7 @@ import 'package:get/get.dart';
 import 'package:stellar/main.dart';
 
 class ThemeController extends GetxController {
-  static ThemeController get instance {
-    return Get.find<ThemeController>();
-  }
+  static ThemeController get instance => Get.find<ThemeController>();
 
   var themeMode = ThemeMode.system.obs; // Default to system theme mode
 

@@ -1,15 +1,17 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:stellar/controllers/auth/login_controller.dart';
+import 'package:stellar/view/android/auth/login/android_login_screen.dart';
+import 'package:stellar/view/android/auth/onboarding/android_onboarding_screen.dart';
 
 import '../../../../main.dart';
 
 class AuthController extends GetxController
     with GetSingleTickerProviderStateMixin {
-  static AuthController get instance {
-    return Get.find<AuthController>();
-  }
+  static AuthController get instance => Get.find<AuthController>();
 
   var isLoading = false.obs;
 
@@ -18,7 +20,7 @@ class AuthController extends GetxController
 
   @override
   void onInit() {
-    Timer(const Duration(days: 3), () {
+    Timer(const Duration(seconds: 3), () {
       loadApp();
     });
     super.onInit();
@@ -47,35 +49,44 @@ class AuthController extends GetxController
         //   transition: Get.defaultTransition,
         // );
       } else if (!isLoggedIn && isLoggedOut) {
-        // await Get.offAll(
-        //   () => const AndroidLoginSignupScreen(),
-        //   routeName: "/login-signup",
-        //   fullscreenDialog: true,
-        //   curve: Curves.easeInOut,
-        //   predicate: (routes) => false,
-        //   popGesture: false,
-        //   transition: Get.defaultTransition,
-        // );
+        await Get.offAll(
+          () => const AndroidLoginScreen(),
+          routeName: "/login",
+          fullscreenDialog: true,
+          curve: Curves.easeInOut,
+          predicate: (routes) => false,
+          popGesture: false,
+          transition: Get.defaultTransition,
+          binding: BindingsBuilder(() => Get.lazyPut<LoginController>(
+                () => LoginController(),
+              )),
+        );
       } else if (isOnboarded) {
-        // await Get.offAll(
-        //   () => const AndroidLoginSignupScreen(),
-        //   routeName: "/login-signup",
-        //   fullscreenDialog: true,
-        //   curve: Curves.easeInOut,
-        //   predicate: (routes) => false,
-        //   popGesture: false,
-        //   transition: Get.defaultTransition,
-        // );
+        await Get.offAll(
+          () => const AndroidLoginScreen(),
+          routeName: "/login",
+          fullscreenDialog: true,
+          curve: Curves.easeInOut,
+          predicate: (routes) => false,
+          popGesture: false,
+          transition: Get.defaultTransition,
+          binding: BindingsBuilder(() => Get.lazyPut<LoginController>(
+                () => LoginController(),
+              )),
+        );
       } else {
-        // await Get.offAll(
-        //   () => const AndroidOnboardingScreen(),
-        //   routeName: "/onboarding",
-        //   fullscreenDialog: true,
-        //   curve: Curves.easeInOut,
-        //   predicate: (routes) => false,
-        //   popGesture: false,
-        //   transition: Get.defaultTransition,
-        // );
+        await Get.offAll(
+          () => const AndroidOnboardingScreen(),
+          routeName: "/onboarding",
+          fullscreenDialog: true,
+          curve: Curves.easeInOut,
+          predicate: (routes) => false,
+          popGesture: false,
+          transition: Get.defaultTransition,
+          binding: BindingsBuilder(() => Get.lazyPut<AuthController>(
+                () => AuthController(),
+              )),
+        );
       }
     }
   }
