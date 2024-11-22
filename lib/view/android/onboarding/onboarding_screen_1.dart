@@ -7,18 +7,17 @@ class OnboardingScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // backgroundColor: ,
-      body: Container(
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              'assets/images/png/onboarding1.png'
-              ),
-              fit: BoxFit.cover
+      backgroundColor: const Color(0xFFFFE7D6),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Mark Homework as completed",
+            style: Theme.of(context).textTheme.titleMedium,
             )
-        )
-      ),
+          ],
+        ),
+      )
     );
   }
 }
