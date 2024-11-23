@@ -26,7 +26,6 @@ dependencies:
   delightful_toast:
   flutter_animate:
   flutter_svg:
-  liquid_swipe:
 
 dev_dependencies:
   flutter_test:

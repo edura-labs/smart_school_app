@@ -7,7 +7,6 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:stellar/bindings/app_initial_bindings.dart';
-import 'package:stellar/controllers/others/theme_controller.dart';
 import 'package:stellar/utils/components/app_error_widget.dart';
 
 import 'routes/routes.dart';
@@ -79,7 +78,8 @@ class MyApp extends StatelessWidget {
       theme: androidLightTheme,
       darkTheme: androidDarkTheme,
       initialBinding: AppInitialBindings(),
-      themeMode: ThemeController.instance.themeMode.value,
+      themeMode: ThemeMode.light,
+      // themeMode: ThemeController.instance.themeMode.value,
       scrollBehavior: ScrollConfiguration.of(context).copyWith(
         multitouchDragStrategy: MultitouchDragStrategy.sumAllPointers,
         // physics: const BouncingScrollPhysics(),
