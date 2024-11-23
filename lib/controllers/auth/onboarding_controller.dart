@@ -1,11 +1,10 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:stellar/main.dart';
 import 'package:stellar/routes/routes.dart';
-import 'package:stellar/view/android/onboarding/module/onboard_content.dart';
+import 'package:stellar/view/android/onboarding/modules/onboard_content.dart';
 
 class OnboardingController extends GetxController {
   static OnboardingController get instance => Get.find<OnboardingController>();
@@ -107,8 +106,6 @@ class OnboardingController extends GetxController {
     isLoading.value = false;
     // Save state that the user has been onboarded
     prefs.setBool("isOnboarded", true);
-
-    log("Login");
 
     await Get.offAllNamed(
       Routes.login,

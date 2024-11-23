@@ -28,7 +28,7 @@ class Routes {
           )),
     ),
     GetPage(
-      name: login,
+      name: onboarding,
       page: () => const AndroidOnboardingScreen(),
       binding: BindingsBuilder(() => Get.lazyPut<OnboardingController>(
             () => OnboardingController(),
