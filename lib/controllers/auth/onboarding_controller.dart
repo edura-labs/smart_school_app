@@ -2,8 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:stellar/controllers/auth/login_controller.dart';
 import 'package:stellar/main.dart';
-import 'package:stellar/routes/routes.dart';
+import 'package:stellar/view/android/auth/login/android_login_screen.dart';
 import 'package:stellar/view/android/onboarding/modules/onboard_content.dart';
 
 class OnboardingController extends GetxController {
@@ -107,15 +108,17 @@ class OnboardingController extends GetxController {
     // Save state that the user has been onboarded
     prefs.setBool("isOnboarded", true);
 
-    await Get.offAllNamed(
-      Routes.login,
-      // () => const AndroidLoginScreen(),
-      // routeName: "/login",
-      // fullscreenDialog: true,
-      // curve: Curves.easeInOut,
+    await Get.offAll(
+      () => const AndroidLoginScreen(),
+      routeName: "/login",
+      fullscreenDialog: true,
+      curve: Curves.easeInOut,
       predicate: (routes) => false,
-      // popGesture: false,
-      // transition: Get.defaultTransition,
+      popGesture: false,
+      transition: Get.defaultTransition,
+      binding: BindingsBuilder(() => Get.lazyPut<LoginController>(
+            () => LoginController(),
+          )),
     );
   }
 }
