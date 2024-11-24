@@ -3,7 +3,7 @@ import 'package:stellar/controllers/auth/auth_controller.dart';
 import 'package:stellar/controllers/auth/login_controller.dart';
 import 'package:stellar/controllers/auth/onboarding_controller.dart';
 import 'package:stellar/view/android/auth/login/android_login_screen.dart';
-import 'package:stellar/view/android/auth/onboarding/android_onboarding_screen.dart';
+import 'package:stellar/view/android/onboarding/android_onboarding_screen.dart';
 import 'package:stellar/view/android/splash_screen/startup/android_startup_screen.dart';
 
 class Routes {
@@ -28,7 +28,7 @@ class Routes {
           )),
     ),
     GetPage(
-      name: login,
+      name: onboarding,
       page: () => const AndroidOnboardingScreen(),
       binding: BindingsBuilder(() => Get.lazyPut<OnboardingController>(
             () => OnboardingController(),
