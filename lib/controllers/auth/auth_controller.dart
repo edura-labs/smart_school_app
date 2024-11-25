@@ -4,8 +4,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:stellar/controllers/auth/login_controller.dart';
+import 'package:stellar/controllers/auth/onboarding_controller.dart';
 import 'package:stellar/view/android/auth/login/android_login_screen.dart';
-import 'package:stellar/view/android/auth/onboarding/android_onboarding_screen.dart';
+import 'package:stellar/view/android/onboarding/android_onboarding_screen.dart';
 
 import '../../../../main.dart';
 
@@ -83,8 +84,8 @@ class AuthController extends GetxController
           predicate: (routes) => false,
           popGesture: false,
           transition: Get.defaultTransition,
-          binding: BindingsBuilder(() => Get.lazyPut<AuthController>(
-                () => AuthController(),
+          binding: BindingsBuilder(() => Get.lazyPut<OnboardingController>(
+                () => OnboardingController(),
               )),
         );
       }
