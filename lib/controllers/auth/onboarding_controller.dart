@@ -36,7 +36,6 @@ class OnboardingController extends GetxController {
   var isLoading = false.obs;
 
   //=========== Controllers =============\\
-  var scrollController = ScrollController().obs;
   var pageController = PageController();
 
   //=========== Functions =============\\

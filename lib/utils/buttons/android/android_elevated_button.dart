@@ -63,11 +63,11 @@ class AndroidElevatedButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         disabledBackgroundColor: disabledBackgroundColor ??
             colorScheme.inversePrimary.withOpacity(.6),
-        backgroundColor: buttonColor ?? colorScheme.secondary,
+        backgroundColor: buttonColor ?? colorScheme.primary,
         elevation: buttonElevation ?? 0,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius ?? 10)),
-        minimumSize: Size(media.width, 40),
+        minimumSize: Size(media.width, 50),
       ),
       child: isLoading
           ? CupertinoActivityIndicator(color: colorScheme.surface)

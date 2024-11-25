@@ -11,6 +11,7 @@ class Assets {
 //=================== Icons ===================\
 //PNG
   static const appIconPng = "assets/icons/png/app_icon.png";
+  static const atomIconPng = "assets/icons/png/atom_icon.png";
 
 //SVG
   static const appIconSvg = "assets/icons/svg/app_icon.svg";
