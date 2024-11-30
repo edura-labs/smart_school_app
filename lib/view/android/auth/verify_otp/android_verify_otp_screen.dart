@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:stellar/constants/assets.dart';
-import 'package:stellar/controllers/auth/login_controller.dart';
+import 'package:stellar/controllers/auth/verify_otp_controller.dart';
 import 'package:stellar/theme/colors.dart';
-import 'package:stellar/view/android/auth/login/modules/form_section.dart';
-import 'package:stellar/view/android/auth/login/modules/top_section.dart';
+import 'package:stellar/view/android/auth/verify_otp/modules/verify_otp_form_section.dart';
+import 'package:stellar/view/android/auth/verify_otp/modules/verify_otp_top_section.dart';
 
-class AndroidLoginScreen extends GetView<LoginController> {
-  const AndroidLoginScreen({super.key});
+class AndroidVerifyOTPSreen extends GetView<VerifyOTPController> {
+  const AndroidVerifyOTPSreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +24,8 @@ class AndroidLoginScreen extends GetView<LoginController> {
             SafeArea(
               child: Column(
                 children: [
-                  topSection(size, colorScheme),
-                  formSection(colorScheme, controller),
+                  verifyOTPTopSection(size, colorScheme),
+                  verifyOTPFormSection(context, colorScheme, controller)
                 ],
               ),
             ),

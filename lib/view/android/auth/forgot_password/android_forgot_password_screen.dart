@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:stellar/constants/assets.dart';
-import 'package:stellar/controllers/auth/login_controller.dart';
+import 'package:stellar/controllers/auth/forgot_password_controller.dart';
 import 'package:stellar/theme/colors.dart';
-import 'package:stellar/view/android/auth/login/modules/form_section.dart';
-import 'package:stellar/view/android/auth/login/modules/top_section.dart';
+import 'package:stellar/view/android/auth/forgot_password/modules/form_section.dart';
+import 'package:stellar/view/android/auth/forgot_password/modules/top_section.dart';
 
-class AndroidLoginScreen extends GetView<LoginController> {
-  const AndroidLoginScreen({super.key});
+class AndroidForgotPasswordScreen extends GetView<ForgotPasswordController> {
+  const AndroidForgotPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.sizeOf(context);
-    var colorScheme = Theme.of(context).colorScheme;
+    final size = MediaQuery.of(context).size;
+    final colorScheme = Theme.of(context).colorScheme;
 
     return GestureDetector(
-      onTap: (() => FocusManager.instance.primaryFocus?.unfocus()),
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
         backgroundColor: colorScheme.primary,
         body: Stack(
@@ -24,8 +24,8 @@ class AndroidLoginScreen extends GetView<LoginController> {
             SafeArea(
               child: Column(
                 children: [
-                  topSection(size, colorScheme),
-                  formSection(colorScheme, controller),
+                  forgotPasswordTopSection(size, colorScheme),
+                  forgotPasswordFormSection(colorScheme),
                 ],
               ),
             ),
@@ -35,10 +35,11 @@ class AndroidLoginScreen extends GetView<LoginController> {
     );
   }
 
+  // Background Image
   backgroundImage(Size size) {
     return Image.asset(
       Assets.atomIconPng,
-      color: kLightGreyColor.withOpacity(.06),
+      color: kLightGreyColor.withOpacity(0.06),
       height: size.height / 1.2,
       width: size.width,
       fit: BoxFit.cover,

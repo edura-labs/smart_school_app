@@ -61,8 +61,8 @@ class AndroidElevatedButton extends StatelessWidget {
               : onPressed,
       onLongPress: null,
       style: ElevatedButton.styleFrom(
-        disabledBackgroundColor: disabledBackgroundColor ??
-            colorScheme.inversePrimary.withOpacity(.6),
+        disabledBackgroundColor:
+            disabledBackgroundColor ?? colorScheme.primary.withOpacity(.6),
         backgroundColor: buttonColor ?? colorScheme.primary,
         elevation: buttonElevation ?? 0,
         shape: RoundedRectangleBorder(
