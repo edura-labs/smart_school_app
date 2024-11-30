@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:stellar/constants/assets.dart';
 import 'package:stellar/constants/consts.dart';
 import 'package:stellar/controllers/auth/login_controller.dart';
+import 'package:stellar/routes/routes.dart';
 import 'package:stellar/theme/colors.dart';
 import 'package:stellar/utils/buttons/android/android_elevated_button.dart';
 import 'package:stellar/utils/text_form_fields/android/android_textformfield.dart';
@@ -148,7 +149,9 @@ class AndroidLoginScreen extends GetView<LoginController> {
           Align(
             alignment: Alignment.centerRight,
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                 Get.toNamed(Routes.forgotPassword); 
+              },
               child: Text(
                 "Forgot Password?",
                 textAlign: TextAlign.center,
