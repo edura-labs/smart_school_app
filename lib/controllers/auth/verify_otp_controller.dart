@@ -231,7 +231,7 @@ class VerifyOTPController extends GetxController {
       "email": userEmail,
       "otp": otpCode,
       "type": "email",
-      "purpose": "registration",
+      // "purpose": "registration",
     };
 
     // //HTTP Client Service
@@ -258,9 +258,9 @@ class VerifyOTPController extends GetxController {
       //   // Attempt to log the user in
       //   bool loginSuccess = await loginUser();
 
-      ApiProcessorController.successSnack(
-        "Verification successful",
-      );
+      await Future.delayed(const Duration(seconds: 3));
+
+      ApiProcessorController.successSnack("Verification successful");
       // await Get.offAll(
       //   () => const AndroidHomeScreen(),
       //   routeName: "/home",

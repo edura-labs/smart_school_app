@@ -63,7 +63,7 @@ verifyOTPFormSection(
             return AndroidElevatedButton(
               title: "Verify OTP",
               isLoading: controller.isLoading.value,
-              onPressed: () {},
+              onPressed: controller.submitOTP,
             );
           }),
         ],
